@@ -1,0 +1,310 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9106672322191329742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d086f73ecd43f534dbd5de70135b8629, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 8c47ce534cce9a54b8d127dc4e0d467d
+  position: {x: -8.999952, y: 734.9999}
+  childIndex: 1
+  parent: {fileID: 3829701611423916017}
+  title: WaitNode
+  duration: 1
+--- !u!114 &-8609971510892294050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e33fa56823e8184f9a540da0e4b6a67, type: 3}
+  m_Name: ExistsInBlackboardNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 069f327e63595ba41adee0c795c0a66b
+  position: {x: -239.99994, y: 500.03174}
+  childIndex: 1
+  parent: {fileID: 5804876140561195715}
+  title: spottedPos Exists
+  child: {fileID: -3426092874377141502}
+  query: spottedPos
+--- !u!114 &-3426092874377141502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ac3a377da727442b935b96dff653db, type: 3}
+  m_Name: FirstSuccessSequencer
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 9cd2d540fe1faa74b80c9b51353ca411
+  position: {x: -356.2501, y: 664.238}
+  childIndex: 1
+  parent: {fileID: -8609971510892294050}
+  title: FirstSuccessSequencer
+  children:
+  - {fileID: 8342916493188298941}
+  - {fileID: -1538700460232028474}
+--- !u!114 &-1538700460232028474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2d396afb9bba84aa8a6a17b6298c7d, type: 3}
+  m_Name: MoveToSpottedPosNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 601ed0e22c221414ca1637c07a414602
+  position: {x: -211.00006, y: 813.82605}
+  childIndex: 2
+  parent: {fileID: -3426092874377141502}
+  title: MoveToSpottedPosNode
+--- !u!114 &-684801211979731298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fb2b921df33a74494cfb039213aa0c, type: 3}
+  m_Name: MoveToRandomNearbyPosNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: f723aacb8c1eb7a47b72db017e4769a7
+  position: {x: 192.00002, y: 734.9999}
+  childIndex: 2
+  parent: {fileID: 3829701611423916017}
+  title: MoveToRandomNearbyPosNode
+  length: 5
+  edgeAvoidance: 5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcffa3e92ddfd4b47bbd582531000a7e, type: 3}
+  m_Name: Zombie
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 4947205485006082361}
+  state: 0
+  nodes:
+  - {fileID: 4947205485006082361}
+  - {fileID: 2897105687817498691}
+  - {fileID: 5804876140561195715}
+  - {fileID: -8609971510892294050}
+  - {fileID: -9106672322191329742}
+  - {fileID: -684801211979731298}
+  - {fileID: 3025572435374660903}
+  - {fileID: 3829701611423916017}
+  - {fileID: -1538700460232028474}
+  - {fileID: -3426092874377141502}
+  - {fileID: 8342916493188298941}
+  - {fileID: 3957313307729942212}
+--- !u!114 &2897105687817498691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8a06e2ff59231499684003c7a85370, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 6931556531c376043bf2352170f0364f
+  position: {x: 7.5200043, y: 145}
+  childIndex: 1
+  parent: {fileID: 4947205485006082361}
+  title: RepeatNode
+  child: {fileID: 5804876140561195715}
+--- !u!114 &3025572435374660903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d086f73ecd43f534dbd5de70135b8629, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 4b4fa9d12c4de264894c98b55865073e
+  position: {x: 460.00104, y: 726.9999}
+  childIndex: 3
+  parent: {fileID: 3829701611423916017}
+  title: WaitNode
+  duration: 1
+--- !u!114 &3829701611423916017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc20394a35c63d147a760e008c3368c6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 44b77bdf1fe76384a8b2d7a01075e7ce
+  position: {x: 183.96591, y: 482.28384}
+  childIndex: 2
+  parent: {fileID: 5804876140561195715}
+  title: SequencerNode
+  children:
+  - {fileID: -9106672322191329742}
+  - {fileID: -684801211979731298}
+  - {fileID: 3025572435374660903}
+  allChildrenMustSucceed: 1
+--- !u!114 &3957313307729942212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32efaf315ff284b4e8c3b88723de6177, type: 3}
+  m_Name: MeleeAttack
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 0756243f31bc2ce44b1409ebca999000
+  position: {x: -434.00006, y: 960.5606}
+  childIndex: 1
+  parent: {fileID: 8342916493188298941}
+  title: MeleeAttack
+--- !u!114 &4947205485006082361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17515771f9a3d64d8fa9471e7dd248f, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: eda03fe4bb3de014b849ac8f3788eaad
+  position: {x: 16.00004, y: -32.297104}
+  childIndex: 1
+  parent: {fileID: 0}
+  title: Root
+  child: {fileID: 2897105687817498691}
+--- !u!114 &5804876140561195715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ac3a377da727442b935b96dff653db, type: 3}
+  m_Name: FirstSuccessSequencer
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: b04f2d6ca94657f41b9fdf2c57da9543
+  position: {x: -39.545013, y: 299.26007}
+  childIndex: 1
+  parent: {fileID: 2897105687817498691}
+  title: FirstSuccessSequencer
+  children:
+  - {fileID: -8609971510892294050}
+  - {fileID: 3829701611423916017}
+--- !u!114 &6185033675071174466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: MoveToSpottedPosNode
+  m_EditorClassIdentifier: Assembly-CSharp::MoveToSpottedPosNode
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 3f992662fd9f9964eae8cc9c578c0190
+  position: {x: -279.69836, y: 699.5536}
+  childIndex: 1
+  parent: {fileID: -8609971510892294050}
+  title: MoveToSpottedPosNode
+--- !u!114 &8342916493188298941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7728a812cc5994a47af03ceccea0eec0, type: 3}
+  m_Name: CheckBool
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 9b74f4d43e94d2c4586b91ef59db84a6
+  position: {x: -442.3758, y: 797}
+  childIndex: 1
+  parent: {fileID: -3426092874377141502}
+  title: Check Within Range
+  child: {fileID: 3957313307729942212}
+  query: withinRange

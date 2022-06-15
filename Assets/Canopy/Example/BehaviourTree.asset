@@ -1,0 +1,290 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8340857665369086159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: MoveToSpottedPosNode
+  m_EditorClassIdentifier: Assembly-CSharp::MoveToSpottedPosNode
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 586fcf1239e89fe4aa68b921376439e4
+  position: {x: -160.66177, y: 767}
+  childIndex: 2
+  parent: {fileID: 5800890373550267674}
+  title: MoveToSpottedPosNode
+--- !u!114 &-7485323413322102856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc20394a35c63d147a760e008c3368c6, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: d08c49141464ac04c9e9fe7986a3a904
+  position: {x: 180.99998, y: 412.99997}
+  childIndex: 2
+  parent: {fileID: 8862937167510682794}
+  title: Wander
+  children:
+  - {fileID: 6350897272945327491}
+  - {fileID: -6126855309492100450}
+  - {fileID: 939448315212346170}
+  allChildrenMustSucceed: 1
+--- !u!114 &-6126855309492100450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fb2b921df33a74494cfb039213aa0c, type: 3}
+  m_Name: MoveToRandomNearbyPosNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: d7194ada904d9ff4bb96d1eee724f4e9
+  position: {x: 172.6678, y: 529.5}
+  childIndex: 2
+  parent: {fileID: -7485323413322102856}
+  title: MoveToRandomNearbyPosNode
+  length: 15
+  edgeAvoidance: 5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcffa3e92ddfd4b47bbd582531000a7e, type: 3}
+  m_Name: BehaviourTree
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 5397377553242334034}
+  state: 0
+  nodes:
+  - {fileID: 5397377553242334034}
+  - {fileID: 292703626848844871}
+  - {fileID: 6350897272945327491}
+  - {fileID: -6126855309492100450}
+  - {fileID: 939448315212346170}
+  - {fileID: -8340857665369086159}
+  - {fileID: 6155016389994827503}
+  - {fileID: 8862937167510682794}
+  - {fileID: -7485323413322102856}
+  - {fileID: 5800890373550267674}
+  - {fileID: 6668760845972609050}
+  - {fileID: 6373363255652147485}
+--- !u!114 &292703626848844871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8a06e2ff59231499684003c7a85370, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: df09116779aa7274d99ae7ecbe421618
+  position: {x: 57.61504, y: 62.58}
+  childIndex: 1
+  parent: {fileID: 5397377553242334034}
+  title: RepeatNode
+  child: {fileID: 8862937167510682794}
+--- !u!114 &939448315212346170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d086f73ecd43f534dbd5de70135b8629, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 1be9218fee6734b44ad57e98241872ad
+  position: {x: 400.6678, y: 529.5}
+  childIndex: 3
+  parent: {fileID: -7485323413322102856}
+  title: WaitNode
+  duration: 1
+--- !u!114 &5397377553242334034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17515771f9a3d64d8fa9471e7dd248f, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 5e71298170f410e4b9bbc21c7af62871
+  position: {x: 65.99997, y: -74.615}
+  childIndex: 1
+  parent: {fileID: 0}
+  title: RootNode
+  child: {fileID: 292703626848844871}
+--- !u!114 &5800890373550267674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ac3a377da727442b935b96dff653db, type: 3}
+  m_Name: FirstSuccessSequencer
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 9010988e78dc532489e66728966fc339
+  position: {x: -325.99997, y: 592.2067}
+  childIndex: 1
+  parent: {fileID: 6155016389994827503}
+  title: FirstSuccessSequencer
+  children:
+  - {fileID: 6668760845972609050}
+  - {fileID: -8340857665369086159}
+--- !u!114 &6155016389994827503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e33fa56823e8184f9a540da0e4b6a67, type: 3}
+  m_Name: ExistsInBlackboardNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: a3c67c1057a3a7f4bbe406b482c2ff2f
+  position: {x: -219.99994, y: 413.00003}
+  childIndex: 1
+  parent: {fileID: 8862937167510682794}
+  title: Has Spotted Player
+  child: {fileID: 5800890373550267674}
+  query: spottedPos
+--- !u!114 &6350897272945327491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d086f73ecd43f534dbd5de70135b8629, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 982a0a967105bfc4ca80c264ae043925
+  position: {x: -5.3322144, y: 521.5}
+  childIndex: 1
+  parent: {fileID: -7485323413322102856}
+  title: WaitNode
+  duration: 1
+--- !u!114 &6373363255652147485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c38fb5d3e267945889c2eba288be95, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 4879a54da916522459fa19846f42c3b0
+  position: {x: -424.18863, y: 913.06165}
+  childIndex: 1
+  parent: {fileID: 6668760845972609050}
+  title: Attack
+  message: 
+--- !u!114 &6668760845972609050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff31d828ce4c314fab4f15e53a4a671, type: 3}
+  m_Name: ForceFail
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 72f35c095bf5c614680156d41fe6c2dd
+  position: {x: -417.12497, y: 750}
+  childIndex: 1
+  parent: {fileID: 5800890373550267674}
+  title: DummyCanAttackNode
+  child: {fileID: 6373363255652147485}
+--- !u!114 &8862937167510682794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ac3a377da727442b935b96dff653db, type: 3}
+  m_Name: FirstSuccessSequencer
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 0}
+  state: 0
+  started: 0
+  guid: 8e7582f59c47c7f4484a6be045a99b60
+  position: {x: 7.999955, y: 239.87857}
+  childIndex: 1
+  parent: {fileID: 292703626848844871}
+  title: FirstSuccessSequencer
+  children:
+  - {fileID: 6155016389994827503}
+  - {fileID: -7485323413322102856}
